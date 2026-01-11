@@ -7,14 +7,11 @@
 	"license": "MPL-2.0",
 	"main": "index.js",
 	"types": "./index.d.ts",
-	"files": [
-		"index.js"
-	],
 	"keywords": [],
 	"scripts": {
-		"check": "tsc --project ./jsconfig.json",
 		"format": "prettier --check --ignore-unknown .",
-		"format:fix": "prettier --write --ignore-unknown ."
+		"format:fix": "prettier --write --ignore-unknown .",
+		"typecheck": "tsc --project ./jsconfig.json"
 	},
 	"devDependencies": {
 		"@hyperupcall/prettier-config": "^0.9.1",
