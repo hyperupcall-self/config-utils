@@ -6,28 +6,21 @@
 	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
 	"license": "MPL-2.0",
 	"main": "index.js",
-	"keywords": [],
-	"types": "./output/index.d.ts",
+	"types": "./index.d.ts",
 	"files": [
-		"output/"
+		"index.js"
 	],
-	"exports": {
-		".": {
-			"import": "./output/index.mjs",
-			"require": "./output/index.cjs"
-		}
-	},
+	"keywords": [],
 	"scripts": {
-		"build": "rm -rf ./output && rollup --config ./rollup.config.js && tsc --project ./jsconfig.json",
+		"check": "tsc --project ./jsconfig.json",
 		"format": "prettier --check --ignore-unknown .",
 		"format:fix": "prettier --write --ignore-unknown ."
 	},
 	"devDependencies": {
 		"@hyperupcall/prettier-config": "^0.7.0",
 		"@types/node": "^22.8.5",
-		"prettier": "^3.3.3",
+		"prettier": "^3.7.4",
 		"prettier-plugin-pkg": "^0.18.1",
-		"rollup": "^4.24.3",
 		"typescript": "^5.6.3"
 	},
 	"prettier": "@hyperupcall/prettier-config"

@@ -20,7 +20,10 @@ function isObject(value) {
 }
 
 // Function from https://github.com/sindresorhus/find-up-simple/blob/v1.0.0/index.js.
-export async function findUp(/** @type {string} */ name, /** @type {FindUpOptions} */ { cwd = process.cwd(), type = 'file', stopAt } = {}) {
+export async function findUp(
+	/** @type {string} */ name,
+	/** @type {FindUpOptions} */ { cwd = process.cwd(), type = 'file', stopAt } = {},
+) {
 	let directory = path.resolve(toPath(cwd) ?? '')
 	const { root } = path.parse(directory)
 	stopAt = path.resolve(directory, toPath(stopAt ?? root))
@@ -42,7 +45,10 @@ export async function findUp(/** @type {string} */ name, /** @type {FindUpOption
 	}
 }
 
-export function findUpSync(/** @type {string} */ name, /** @type {FindUpOptions} */ { cwd = process.cwd(), type = 'file', stopAt } = {}) {
+export function findUpSync(
+	/** @type {string} */ name,
+	/** @type {FindUpOptions} */ { cwd = process.cwd(), type = 'file', stopAt } = {},
+) {
 	let directory = path.resolve(toPath(cwd) ?? '')
 	const { root } = path.parse(directory)
 	stopAt = path.resolve(directory, toPath(stopAt ?? root))
